@@ -27,7 +27,11 @@ spring:
         - id: viewpage
           uri: http://localhost:8085
           predicates:
-            - Path= /roomviews/**
+            - Path=/roomviews/**
+        - id: rentcar
+          uri: http://localhost:8086
+          predicates:
+            - Path=/rentcars/**, /chk/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -66,7 +70,11 @@ spring:
         - id: viewpage
           uri: http://viewpage:8080
           predicates:
-            - Path= /roomviews/**
+            - Path=/roomviews/**
+        - id: rentcar
+          uri: http://rentcar:8080
+          predicates:
+            - Path=/rentcars/**, /chk/**
       globalcors:
         corsConfigurations:
           '[/**]':
